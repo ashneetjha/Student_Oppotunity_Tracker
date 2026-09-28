@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Create Account - OpportunityHub</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="auth-body">
+<div class="auth-card">
+  <a class="brand auth-brand" href="index.html"><span class="brand-mark">O</span> OpportunityHub</a>
+  <div class="auth-heading"><h1>Create your account</h1><p>Start discovering and tracking opportunities.</p></div>
+  <form id="registerForm" onsubmit="registerUser(event)">
+    <div class="two-input"><div><label>First name</label><input id="regFirstName" required placeholder="Alex"></div><div><label>Last name</label><input id="regLastName" required placeholder="Johnson"></div></div>
+    <label>Email address</label><input id="regEmail" type="email" required placeholder="you@example.com">
+    <label>College / University</label><input id="regCollege" required placeholder="Your college">
+    <label>Password</label><input id="regPassword" type="password" required placeholder="Create a password">
+    <label class="check terms"><input type="checkbox" required> I agree to the Terms & Conditions</label>
+    <button class="btn btn-primary full" type="submit">Create Account →</button>
+  </form>
+  <p class="auth-bottom">Already have an account? <a href="login.html">Sign in</a></p>
+</div>
+<script src="js/app.js"></script>
+</body></html>

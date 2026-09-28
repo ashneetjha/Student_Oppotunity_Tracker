@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - OpportunityHub</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="app-body">
+
+<aside class="sidebar">
+  <a class="brand side-brand" href="dashboard.html"><span class="brand-mark">O</span><span>OpportunityHub</span></a>
+  <div class="side-label">MENU</div>
+  <a class="nav-item" href="dashboard.html"><span>⌂</span> Dashboard</a>
+  <a class="nav-item" href="explore.html"><span>⌕</span> Explore</a>
+  <a class="nav-item" href="bookmarks.html"><span>♡</span> Bookmarks <em id="bookmarkCount">0</em></a>
+  <a class="nav-item" href="applications.html"><span>▣</span> Applications</a>
+  <a class="nav-item" href="deadlines.html"><span>◷</span> Deadlines</a>
+  <div class="side-label">ACCOUNT</div>
+  <a class="nav-item" href="profile.html"><span>◎</span> Profile</a>
+  <a class="nav-item" href="admin.html"><span>⚙</span> Admin Portal</a>
+  <div class="side-bottom">
+    <div class="help-box"><b>Need help?</b><p>Find the right opportunity for you.</p><a href="explore.html">Explore now →</a></div>
+    <a class="nav-item logout" href="index.html"><span>↪</span> Log out</a>
+  </div>
+</aside>
+
+<main class="main-content">
+<header class="topbar">
+  <div class="mobile-brand"><span class="brand-mark">O</span> OpportunityHub</div>
+  <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search opportunities..." oninput="globalSearch(this.value)"></div>
+  <div class="top-actions"><button class="icon-btn">♢</button><a href="profile.html" class="user-mini"><span class="avatar">A</span><span><b>Alex Johnson</b><small>Student</small></span></a></div>
+</header>
+
+<section class="page-head"><div><p class="muted" id="dashDate">Today</p><h1 id="dashGreeting">Welcome 👋</h1><p>Here’s what’s happening with your opportunities.</p></div><a href="explore.html" class="btn btn-primary">+ Find Opportunities</a></section>
+<section class="stats-grid">
+  <div class="stat-card"><div class="stat-icon purple">◈</div><span>Saved Opportunities</span><strong id="savedStat">0</strong><small>Saved for later</small></div>
+  <div class="stat-card"><div class="stat-icon blue">▣</div><span>Applications</span><strong id="dashAppStat">0</strong><small id="dashAppSub">in progress</small></div>
+  <div class="stat-card"><div class="stat-icon green">✓</div><span>Shortlisted</span><strong id="dashShortlistedStat">0</strong><small>Awaiting response</small></div>
+  <div class="stat-card"><div class="stat-icon orange">◷</div><span>Upcoming Deadlines</span><strong id="dashDeadlinesStat">0</strong><small class="danger-text" id="dashUrgentStat">Active opportunities</small></div>
+</section>
+<div class="dashboard-grid">
+  <section class="panel"><div class="panel-head"><div><h2>Recommended for you</h2><p>Based on your skills and interests</p></div><a href="explore.html">View all →</a></div><div id="recommended" class="opportunity-list"></div></section>
+  <section class="panel"><div class="panel-head"><div><h2>Application progress</h2><p>Your current application status</p></div><a href="applications.html">View all →</a></div>
+    <div class="progress-chart"><div class="donut"><div id="donutCenter"><b>0</b><span>Applications</span></div></div><div class="legend" id="progressLegend"><p><i class="dot interested"></i> Interested <b id="legendInterested">0</b></p><p><i class="dot applied"></i> Applied <b id="legendApplied">0</b></p><p><i class="dot shortlisted"></i> Shortlisted <b id="legendShortlisted">0</b></p><p><i class="dot completed"></i> Completed <b id="legendCompleted">0</b></p></div></div>
+  </section>
+</div>
+<section class="panel deadline-panel"><div class="panel-head"><div><h2>Upcoming deadlines</h2><p>Don't miss your next opportunity</p></div><a href="deadlines.html">View calendar →</a></div><div id="dashDeadlines" class="deadline-list"></div></section>
+<script>window.addEventListener('DOMContentLoaded',()=>renderDashboard());</script>
+
+</main>
+<script src="js/app.js"></script>
+</body></html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Portal - OpportunityHub</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="app-body">
+
+<aside class="sidebar">
+  <a class="brand side-brand" href="dashboard.html"><span class="brand-mark">O</span><span>OpportunityHub</span></a>
+  <div class="side-label">MENU</div>
+  <a class="nav-item" href="dashboard.html"><span>⌂</span> Dashboard</a>
+  <a class="nav-item" href="explore.html"><span>⌕</span> Explore</a>
+  <a class="nav-item" href="bookmarks.html"><span>♡</span> Bookmarks <em id="bookmarkCount">0</em></a>
+  <a class="nav-item" href="applications.html"><span>▣</span> Applications</a>
+  <a class="nav-item" href="deadlines.html"><span>◷</span> Deadlines</a>
+  <div class="side-label">ACCOUNT</div>
+  <a class="nav-item" href="profile.html"><span>◎</span> Profile</a>
+  <a class="nav-item" href="admin.html"><span>⚙</span> Admin Portal</a>
+  <div class="side-bottom">
+    <div class="help-box"><b>Need help?</b><p>Find the right opportunity for you.</p><a href="explore.html">Explore now →</a></div>
+    <a class="nav-item logout" href="index.html"><span>↪</span> Log out</a>
+  </div>
+</aside>
+
+<main class="main-content">
+<header class="topbar">
+  <div class="mobile-brand"><span class="brand-mark">O</span> OpportunityHub</div>
+  <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search opportunities..." oninput="globalSearch(this.value)"></div>
+  <div class="top-actions"><button class="icon-btn">♢</button><a href="profile.html" class="user-mini"><span class="avatar">A</span><span><b>Alex Johnson</b><small>Student</small></span></a></div>
+</header>
+
+<section class="page-head"><div><p class="muted">Management</p><h1>Admin Dashboard</h1><p>Manage student opportunities and platform content.</p></div><button class="btn btn-primary" onclick="openModal()">+ Add Opportunity</button></section>
+<section class="stats-grid"><div class="stat-card"><span>Total Opportunities</span><strong id="adminStatTotal">0</strong><small>Across all categories</small></div><div class="stat-card"><span>Active</span><strong id="adminStatActive">0</strong><small>Currently accepting applications</small></div><div class="stat-card"><span>Students</span><strong id="adminStatStudents">0</strong><small>Registered users</small></div><div class="stat-card"><span>Applications</span><strong id="adminStatApps">0</strong><small>Across all opportunities</small></div></section>
+<section class="panel table-panel"><div class="panel-head"><div><h2>Manage Opportunities</h2><p>Create, update or close opportunities.</p></div><input class="table-search" id="adminTableSearch" placeholder="Search..." oninput="filterAdminTable(this.value)"></div><div class="table-scroll"><table><thead><tr><th>Opportunity</th><th>Organization</th><th>Type</th><th>Deadline</th><th>Status</th><th>Actions</th></tr></thead><tbody id="adminTable"></tbody></table></div></section>
+<div class="modal" id="modal"><div class="modal-card"><button class="modal-close" onclick="closeModal()">×</button><h2 id="modalTitle">Add Opportunity</h2><form onsubmit="saveOpportunityForm(event)"><input type="hidden" id="editOppId"><label>Title</label><input id="newTitle" required placeholder="Opportunity title"><label>Organization</label><input id="newOrg" required placeholder="Organization"><label>Type</label><select id="newType"><option>Internship</option><option>Hackathon</option><option>Workshop</option><option>Certification</option><option>Competition</option></select><label>Deadline</label><input id="newDeadline" type="date" required><label>Skills (comma separated)</label><input id="newSkills" placeholder="Python, React, SQL"><button class="btn btn-primary full" id="modalSubmitBtn">Publish Opportunity</button></form></div></div>
+<script>window.addEventListener('DOMContentLoaded',()=>renderAdmin());</script>
+
+</main>
+<script src="js/app.js"></script>
+</body></html>

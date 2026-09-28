@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile - OpportunityHub</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="app-body">
+
+<aside class="sidebar">
+  <a class="brand side-brand" href="dashboard.html"><span class="brand-mark">O</span><span>OpportunityHub</span></a>
+  <div class="side-label">MENU</div>
+  <a class="nav-item" href="dashboard.html"><span>⌂</span> Dashboard</a>
+  <a class="nav-item" href="explore.html"><span>⌕</span> Explore</a>
+  <a class="nav-item" href="bookmarks.html"><span>♡</span> Bookmarks <em id="bookmarkCount">0</em></a>
+  <a class="nav-item" href="applications.html"><span>▣</span> Applications</a>
+  <a class="nav-item" href="deadlines.html"><span>◷</span> Deadlines</a>
+  <div class="side-label">ACCOUNT</div>
+  <a class="nav-item" href="profile.html"><span>◎</span> Profile</a>
+  <a class="nav-item" href="admin.html"><span>⚙</span> Admin Portal</a>
+  <div class="side-bottom">
+    <div class="help-box"><b>Need help?</b><p>Find the right opportunity for you.</p><a href="explore.html">Explore now →</a></div>
+    <a class="nav-item logout" href="index.html"><span>↪</span> Log out</a>
+  </div>
+</aside>
+
+<main class="main-content">
+<header class="topbar">
+  <div class="mobile-brand"><span class="brand-mark">O</span> OpportunityHub</div>
+  <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search opportunities..." oninput="globalSearch(this.value)"></div>
+  <div class="top-actions"><button class="icon-btn">♢</button><a href="profile.html" class="user-mini"><span class="avatar">A</span><span><b>Alex Johnson</b><small>Student</small></span></a></div>
+</header>
+
+<section class="page-head"><div><p class="muted">Account</p><h1>My Profile</h1><p>Manage your personal information and preferences.</p></div><button class="btn btn-primary" onclick="saveProfile()">Save Changes</button></section>
+<div class="profile-layout">
+<section class="panel profile-card"><div class="profile-cover"></div><div class="profile-main"><div class="big-avatar" id="profileBigAvatar">A</div><h2 id="profileCardName">Alex Johnson</h2><p class="muted" id="profileCardRole">Computer Science Student</p><p id="profileCardEmail">alex.johnson@example.com</p><hr><h3>Skills</h3><div class="chips"><span>JavaScript</span><span>React</span><span>Python</span><span>SQL</span><span>UI/UX</span></div></div></section>
+<section class="panel"><h2>Personal Information</h2><div class="form-grid"><div><label>First name</label><input id="profileFirstName" value="Alex"></div><div><label>Last name</label><input id="profileLastName" value="Johnson"></div><div class="wide"><label>Email</label><input id="profileEmail" value="alex.johnson@example.com" disabled style="background:#f5f6fa"></div><div class="wide"><label>College</label><input id="profileCollege" value="SRM Institute of Science and Technology"></div><div class="wide"><label>Bio</label><textarea id="profileBio" rows="4">Computer Science student interested in software development, AI and technology.</textarea></div></div><h3>Opportunity Preferences</h3><div class="chips selectable"><span class="selected">Internships</span><span class="selected">Hackathons</span><span>Workshops</span><span class="selected">Certifications</span><span>Competitions</span></div></section>
+</div>
+
+</main>
+<script src="js/app.js"></script>
+</body></html>

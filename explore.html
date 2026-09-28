@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore - OpportunityHub</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="app-body">
+
+<aside class="sidebar">
+  <a class="brand side-brand" href="dashboard.html"><span class="brand-mark">O</span><span>OpportunityHub</span></a>
+  <div class="side-label">MENU</div>
+  <a class="nav-item" href="dashboard.html"><span>⌂</span> Dashboard</a>
+  <a class="nav-item" href="explore.html"><span>⌕</span> Explore</a>
+  <a class="nav-item" href="bookmarks.html"><span>♡</span> Bookmarks <em id="bookmarkCount">0</em></a>
+  <a class="nav-item" href="applications.html"><span>▣</span> Applications</a>
+  <a class="nav-item" href="deadlines.html"><span>◷</span> Deadlines</a>
+  <div class="side-label">ACCOUNT</div>
+  <a class="nav-item" href="profile.html"><span>◎</span> Profile</a>
+  <a class="nav-item" href="admin.html"><span>⚙</span> Admin Portal</a>
+  <div class="side-bottom">
+    <div class="help-box"><b>Need help?</b><p>Find the right opportunity for you.</p><a href="explore.html">Explore now →</a></div>
+    <a class="nav-item logout" href="index.html"><span>↪</span> Log out</a>
+  </div>
+</aside>
+
+<main class="main-content">
+<header class="topbar">
+  <div class="mobile-brand"><span class="brand-mark">O</span> OpportunityHub</div>
+  <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search opportunities..." oninput="globalSearch(this.value)"></div>
+  <div class="top-actions"><button class="icon-btn">♢</button><a href="profile.html" class="user-mini"><span class="avatar">A</span><span><b>Alex Johnson</b><small>Student</small></span></a></div>
+</header>
+
+<section class="page-head"><div><p class="muted">Discover</p><h1>Explore Opportunities</h1><p>Find opportunities that match your goals and skills.</p></div></section>
+<section class="filter-panel">
+  <div class="search-large"><span>⌕</span><input id="oppSearch" placeholder="Search by title, company or skill..." oninput="filterOpps()"></div>
+  <select id="typeFilter" onchange="filterOpps()"><option value="">All Types</option><option>Internship</option><option>Hackathon</option><option>Workshop</option><option>Certification</option><option>Competition</option></select>
+  <select id="deadlineFilter" onchange="filterOpps()"><option value="">Any Deadline</option><option value="7">Within 7 days</option><option value="30">Within 30 days</option></select>
+  <select id="skillFilter" onchange="filterOpps()"><option value="">All Skills</option><option>JavaScript</option><option>Python</option><option>React</option><option>AI/ML</option><option>Cloud</option></select>
+</section>
+<div class="results-head"><b id="resultCount">12 opportunities</b><select><option>Newest first</option><option>Deadline soon</option></select></div>
+<div id="opportunityGrid" class="opportunity-grid"></div>
+
+</main>
+<script src="js/app.js"></script>
+</body></html>

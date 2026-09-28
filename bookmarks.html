@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookmarks - OpportunityHub</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="app-body">
+
+<aside class="sidebar">
+  <a class="brand side-brand" href="dashboard.html"><span class="brand-mark">O</span><span>OpportunityHub</span></a>
+  <div class="side-label">MENU</div>
+  <a class="nav-item" href="dashboard.html"><span>⌂</span> Dashboard</a>
+  <a class="nav-item" href="explore.html"><span>⌕</span> Explore</a>
+  <a class="nav-item" href="bookmarks.html"><span>♡</span> Bookmarks <em id="bookmarkCount">0</em></a>
+  <a class="nav-item" href="applications.html"><span>▣</span> Applications</a>
+  <a class="nav-item" href="deadlines.html"><span>◷</span> Deadlines</a>
+  <div class="side-label">ACCOUNT</div>
+  <a class="nav-item" href="profile.html"><span>◎</span> Profile</a>
+  <a class="nav-item" href="admin.html"><span>⚙</span> Admin Portal</a>
+  <div class="side-bottom">
+    <div class="help-box"><b>Need help?</b><p>Find the right opportunity for you.</p><a href="explore.html">Explore now →</a></div>
+    <a class="nav-item logout" href="index.html"><span>↪</span> Log out</a>
+  </div>
+</aside>
+
+<main class="main-content">
+<header class="topbar">
+  <div class="mobile-brand"><span class="brand-mark">O</span> OpportunityHub</div>
+  <div class="top-search"><span>⌕</span><input id="globalSearch" placeholder="Search opportunities..." oninput="globalSearch(this.value)"></div>
+  <div class="top-actions"><button class="icon-btn">♢</button><a href="profile.html" class="user-mini"><span class="avatar">A</span><span><b>Alex Johnson</b><small>Student</small></span></a></div>
+</header>
+
+<section class="page-head"><div><p class="muted">Your collection</p><h1>Bookmarked Opportunities</h1><p>Keep track of opportunities you want to explore later.</p></div></section>
+<div id="bookmarkGrid" class="opportunity-grid"></div>
+<div id="emptyBookmarks" class="empty-state" style="display:none"><div>♡</div><h2>No bookmarks yet</h2><p>Save opportunities from Explore to see them here.</p><a href="explore.html" class="btn btn-primary">Explore Opportunities</a></div>
+<script>window.addEventListener('DOMContentLoaded',()=>renderBookmarks());</script>
+
+</main>
+<script src="js/app.js"></script>
+</body></html>
